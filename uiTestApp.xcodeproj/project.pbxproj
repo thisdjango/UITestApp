@@ -7,20 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C40AC86924D30B9900EB589D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AC86824D30B9900EB589D /* Constants.swift */; };
 		C4769BE724D2FF6E00D58E6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4769BE624D2FF6E00D58E6A /* AppDelegate.swift */; };
-		C4769BE924D2FF6E00D58E6A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4769BE824D2FF6E00D58E6A /* SceneDelegate.swift */; };
 		C4769BEB24D2FF6E00D58E6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4769BEA24D2FF6E00D58E6A /* ViewController.swift */; };
-		C4769BEE24D2FF6E00D58E6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4769BEC24D2FF6E00D58E6A /* Main.storyboard */; };
 		C4769BF024D2FF6F00D58E6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4769BEF24D2FF6F00D58E6A /* Assets.xcassets */; };
 		C4769BF324D2FF6F00D58E6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4769BF124D2FF6F00D58E6A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C40AC86824D30B9900EB589D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C4769BE324D2FF6E00D58E6A /* uiTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uiTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4769BE624D2FF6E00D58E6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C4769BE824D2FF6E00D58E6A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C4769BEA24D2FF6E00D58E6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C4769BED24D2FF6E00D58E6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4769BEF24D2FF6F00D58E6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4769BF224D2FF6F00D58E6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4769BF424D2FF6F00D58E6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,6 +35,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C40AC86624D30AB600EB589D /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				C4769BEF24D2FF6F00D58E6A /* Assets.xcassets */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		C40AC86724D30AD600EB589D /* Sourses */ = {
+			isa = PBXGroup;
+			children = (
+				C40AC86824D30B9900EB589D /* Constants.swift */,
+				C4769BE624D2FF6E00D58E6A /* AppDelegate.swift */,
+				C4769BFA24D3062800D58E6A /* View */,
+			);
+			path = Sourses;
+			sourceTree = "<group>";
+		};
 		C4769BDA24D2FF6D00D58E6A = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +72,20 @@
 		C4769BE524D2FF6E00D58E6A /* uiTestApp */ = {
 			isa = PBXGroup;
 			children = (
-				C4769BE624D2FF6E00D58E6A /* AppDelegate.swift */,
-				C4769BE824D2FF6E00D58E6A /* SceneDelegate.swift */,
-				C4769BEA24D2FF6E00D58E6A /* ViewController.swift */,
-				C4769BEC24D2FF6E00D58E6A /* Main.storyboard */,
-				C4769BEF24D2FF6F00D58E6A /* Assets.xcassets */,
-				C4769BF124D2FF6F00D58E6A /* LaunchScreen.storyboard */,
 				C4769BF424D2FF6F00D58E6A /* Info.plist */,
+				C40AC86724D30AD600EB589D /* Sourses */,
+				C40AC86624D30AB600EB589D /* Resourses */,
 			);
 			path = uiTestApp;
+			sourceTree = "<group>";
+		};
+		C4769BFA24D3062800D58E6A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C4769BEA24D2FF6E00D58E6A /* ViewController.swift */,
+				C4769BF124D2FF6F00D58E6A /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +148,6 @@
 			files = (
 				C4769BF324D2FF6F00D58E6A /* LaunchScreen.storyboard in Resources */,
 				C4769BF024D2FF6F00D58E6A /* Assets.xcassets in Resources */,
-				C4769BEE24D2FF6E00D58E6A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,21 +160,13 @@
 			files = (
 				C4769BEB24D2FF6E00D58E6A /* ViewController.swift in Sources */,
 				C4769BE724D2FF6E00D58E6A /* AppDelegate.swift in Sources */,
-				C4769BE924D2FF6E00D58E6A /* SceneDelegate.swift in Sources */,
+				C40AC86924D30B9900EB589D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C4769BEC24D2FF6E00D58E6A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4769BED24D2FF6E00D58E6A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C4769BF124D2FF6F00D58E6A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -286,12 +298,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = uiTestApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.uiTestApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = uiTestApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -303,12 +316,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = uiTestApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.uiTestApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = uiTestApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
