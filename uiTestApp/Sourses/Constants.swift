@@ -13,3 +13,10 @@ struct AppColor {
     static let background = UIColor(named: "Background")
     
 }
+
+extension UIView {
+    public func prepare() -> UIView {
+        translatesAutoresizingMaskIntoConstraints = false
+        return self
+    }
+}
