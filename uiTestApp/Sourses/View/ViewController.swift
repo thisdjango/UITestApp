@@ -10,14 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
     // MARK: - Private Properties
-    private var commonStackView: UIStackView = {
-        let stack = UIStackView()
-        stack.alignment = .center
-        stack.axis = .vertical
-        stack.distribution = .equalSpacing
-        stack.spacing = 9
-        return stack
-    }()
     private var logoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
@@ -70,17 +62,14 @@ class ViewController: UIViewController {
     }
     
     private func addSubviews() {
-        view.addSubview(commonStackView.prepare())
         view.insertSubview(backView.prepare(), at: 0)
-        commonStackView.addArrangedSubview(logoImageView.prepare())
-        commonStackView.addArrangedSubview(buttonsStack.prepare())
-        commonStackView.addArrangedSubview(infoCardView.prepare())
-        commonStackView.addArrangedSubview(button.prepare())
-        
         buttonsStack.addArrangedSubview(securityButton.prepare())
         buttonsStack.addArrangedSubview(speedButton.prepare())
         buttonsStack.addArrangedSubview(manualButton.prepare())
-        
+        view.addSubview(logoImageView.prepare())
+        view.addSubview(buttonsStack.prepare())
+        view.addSubview(infoCardView.prepare())
+        view.addSubview(button.prepare())
         
     }
     
@@ -95,14 +84,30 @@ class ViewController: UIViewController {
     }
     
     private func configureAnchors() {
-        commonStackView.topAnchor.constraint(equalTo: view.topAnchor,constant: 40).isActive = true
-        commonStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        commonStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 24).isActive = true
-        commonStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -24).isActive = true
-        buttonsStack.leadingAnchor.constraint(equalTo: commonStackView.leadingAnchor).isActive = true
-        buttonsStack.trailingAnchor.constraint(equalTo: commonStackView.trailingAnchor).isActive = true
+        let lead = view.leadingAnchor
+        let trail = view.trailingAnchor
+        let top = view.topAnchor
+        let bottom = view.bottomAnchor
+        
+        logoImageView.topAnchor.constraint(equalTo: top, constant: 40).isActive = true
+        logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        
+        buttonsStack.topAnchor.constraint(greaterThanOrEqualTo: logoImageView.bottomAnchor, constant: 15).isActive = true
+        buttonsStack.heightAnchor.constraint(greaterThanOrEqualToConstant: 43).isActive = true
+        buttonsStack.leadingAnchor.constraint(equalTo: lead, constant: 24).isActive = true
+        buttonsStack.trailingAnchor.constraint(equalTo: trail, constant: -24).isActive = true
+
         backView.pin(to: buttonsStack)
-        button.leadingAnchor.constraint(equalTo: commonStackView.leadingAnchor).isActive = true
+        
+        infoCardView.topAnchor.constraint(equalTo: buttonsStack.bottomAnchor, constant: 35).isActive = true
+        infoCardView.leadingAnchor.constraint(equalTo: lead, constant: 24).isActive = true
+        infoCardView.trailingAnchor.constraint(equalTo: trail, constant: -24).isActive = true
+        
+        button.topAnchor.constraint(equalTo: infoCardView.bottomAnchor, constant: 45).isActive = true
+        button.leadingAnchor.constraint(equalTo: lead, constant: 24).isActive = true
+        button.trailingAnchor.constraint(equalTo: trail, constant: -24).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        button.bottomAnchor.constraint(equalTo: bottom, constant: -35).isActive = true
     }
     
     private func prepareButton(name image: String, to selector: Selector) -> UIButton {

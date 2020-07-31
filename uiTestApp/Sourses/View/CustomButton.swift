@@ -19,7 +19,10 @@ class CustomButton: UIButton {
             backgroundColor = AppColor.liteGray
             label.textColor = .darkGray
         }
-        if green { gradLayer.colors = [AppColor.green.cgColor, AppColor.liteGreen.cgColor] }
+        if green {
+            gradLayer.colors = [AppColor.green.cgColor, AppColor.liteGreen.cgColor]
+            label.textColor = .white
+        }
         label.text = text
     }
     
@@ -40,10 +43,10 @@ class CustomButton: UIButton {
         gradLayer.cornerRadius = frame.height / 2 + 0.1
         layer.insertSublayer(gradLayer, at: 0)
         layer.cornerRadius = frame.height / 2
-        layer.borderWidth = 4
+        layer.borderWidth = 7
         layer.borderColor = AppColor.liteGray.cgColor
         translatesAutoresizingMaskIntoConstraints = false
-        heightAnchor.constraint(equalToConstant: 43).isActive = true
+        heightAnchor.constraint(equalToConstant: 53).isActive = true
         widthAnchor.constraint(greaterThanOrEqualToConstant: 98).isActive = true
         widthAnchor.constraint(lessThanOrEqualToConstant: 126).isActive = true
     }
