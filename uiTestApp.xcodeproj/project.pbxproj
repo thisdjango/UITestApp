@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		C40AC86924D30B9900EB589D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AC86824D30B9900EB589D /* Constants.swift */; };
+		C40AC86B24D3608100EB589D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AC86A24D3608100EB589D /* CardView.swift */; };
+		C40AC86D24D368BB00EB589D /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AC86C24D368BB00EB589D /* CustomButton.swift */; };
 		C4769BE724D2FF6E00D58E6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4769BE624D2FF6E00D58E6A /* AppDelegate.swift */; };
 		C4769BEB24D2FF6E00D58E6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4769BEA24D2FF6E00D58E6A /* ViewController.swift */; };
 		C4769BF024D2FF6F00D58E6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4769BEF24D2FF6F00D58E6A /* Assets.xcassets */; };
 		C4769BF324D2FF6F00D58E6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4769BF124D2FF6F00D58E6A /* LaunchScreen.storyboard */; };
+		C4BA420424D39AC000960FD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4BA420324D39AC000960FD4 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C40AC86824D30B9900EB589D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C40AC86A24D3608100EB589D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardView.swift; path = ../../../../UITestApp/uiTestApp/Sourses/View/CardView.swift; sourceTree = "<group>"; };
+		C40AC86C24D368BB00EB589D /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomButton.swift; path = ../../../../UITestApp/uiTestApp/Sourses/View/CustomButton.swift; sourceTree = "<group>"; };
 		C4769BE324D2FF6E00D58E6A /* uiTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uiTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4769BE624D2FF6E00D58E6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4769BEA24D2FF6E00D58E6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C4769BEF24D2FF6F00D58E6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4769BF224D2FF6F00D58E6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4769BF424D2FF6F00D58E6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4BA420324D39AC000960FD4 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +88,11 @@
 		C4769BFA24D3062800D58E6A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C4769BEA24D2FF6E00D58E6A /* ViewController.swift */,
 				C4769BF124D2FF6F00D58E6A /* LaunchScreen.storyboard */,
+				C40AC86A24D3608100EB589D /* CardView.swift */,
+				C4769BEA24D2FF6E00D58E6A /* ViewController.swift */,
+				C40AC86C24D368BB00EB589D /* CustomButton.swift */,
+				C4BA420324D39AC000960FD4 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -146,6 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4BA420424D39AC000960FD4 /* Main.storyboard in Resources */,
 				C4769BF324D2FF6F00D58E6A /* LaunchScreen.storyboard in Resources */,
 				C4769BF024D2FF6F00D58E6A /* Assets.xcassets in Resources */,
 			);
@@ -160,7 +170,9 @@
 			files = (
 				C4769BEB24D2FF6E00D58E6A /* ViewController.swift in Sources */,
 				C4769BE724D2FF6E00D58E6A /* AppDelegate.swift in Sources */,
+				C40AC86B24D3608100EB589D /* CardView.swift in Sources */,
 				C40AC86924D30B9900EB589D /* Constants.swift in Sources */,
+				C40AC86D24D368BB00EB589D /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
