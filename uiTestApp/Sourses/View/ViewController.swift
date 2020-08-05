@@ -93,7 +93,8 @@ class ViewController: UIViewController {
         logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
         buttonsStack.topAnchor.constraint(greaterThanOrEqualTo: logoImageView.bottomAnchor, constant: 15).isActive = true
-        buttonsStack.heightAnchor.constraint(greaterThanOrEqualToConstant: 43).isActive = true
+        buttonsStack.topAnchor.constraint(lessThanOrEqualTo: logoImageView.bottomAnchor, constant: 60).isActive = true
+        buttonsStack.heightAnchor.constraint(equalToConstant: 43).isActive = true
         buttonsStack.leadingAnchor.constraint(equalTo: lead, constant: 24).isActive = true
         buttonsStack.trailingAnchor.constraint(equalTo: trail, constant: -24).isActive = true
 

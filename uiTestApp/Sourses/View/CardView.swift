@@ -41,8 +41,8 @@ class CardView: UIView {
         
         imageView.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
         imageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: 60).isActive = true
-        
+        imageView.heightAnchor.constraint(greaterThanOrEqualToConstant: 60).isActive = true
+        imageView.heightAnchor.constraint(lessThanOrEqualToConstant: 120).isActive = true
         titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 5).isActive = true
         titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         
