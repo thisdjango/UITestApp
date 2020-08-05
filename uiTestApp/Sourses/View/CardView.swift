@@ -35,40 +35,46 @@ class CardView: UIView {
         titleLabel.textColor = AppColor.green
         titleLabel.font = UIFont.systemFont(ofSize: 20)
         
-        unsafeLabel.configure(left: "Unsafe websites blocked:", right:  "145")
-        dbVersionLabel.configure(left: "Database version:", right:  "1.25")
-        totalLabel.configure(left: "Total sites in db:", right:  "2663599")
-        
-        imageView.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
-        imageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        imageView.heightAnchor.constraint(greaterThanOrEqualToConstant: 60).isActive = true
-        imageView.heightAnchor.constraint(lessThanOrEqualToConstant: 120).isActive = true
-        titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 5).isActive = true
-        titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        
-        unsafeLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5).isActive = true
-        unsafeLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        unsafeLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
-        unsafeLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
-        
-        dbVersionLabel.topAnchor.constraint(equalTo: unsafeLabel.bottomAnchor, constant: 5).isActive = true
-        dbVersionLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        dbVersionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
-        dbVersionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
-        
-        totalLabel.topAnchor.constraint(equalTo: dbVersionLabel.bottomAnchor, constant: 5).isActive = true
-        totalLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        totalLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
-        totalLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
-        
         checkLabel.text = "Check Database Updates"
         checkLabel.font = UIFont.systemFont(ofSize: 15)
         
-        checkLabel.topAnchor.constraint(equalTo: totalLabel.bottomAnchor, constant: 10).isActive = true
-        checkLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        checkLabel.bottomAnchor.constraint(equalTo: bottomAnchor,  constant: -22).isActive = true
-        checkLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
-        checkLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
+        unsafeLabel.configure(left: "Unsafe websites blocked:", right:  "145")
+        dbVersionLabel.configure(left: "Database version:", right:  "1.25")
+        totalLabel.configure(left: "Total sites in db:", right:  "2663599")
+        NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            imageView.heightAnchor.constraint(greaterThanOrEqualToConstant: 30),
+            imageView.heightAnchor.constraint(lessThanOrEqualToConstant: 70),
+            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 5),
+            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            
+            unsafeLabel.topAnchor.constraint(greaterThanOrEqualTo: titleLabel.bottomAnchor, constant: 15),
+            unsafeLabel.topAnchor.constraint(lessThanOrEqualTo: titleLabel.bottomAnchor, constant: 60),
+            unsafeLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            unsafeLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            unsafeLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            unsafeLabel.bottomAnchor.constraint(greaterThanOrEqualTo: dbVersionLabel.topAnchor, constant: -25),
+            unsafeLabel.bottomAnchor.constraint(lessThanOrEqualTo: dbVersionLabel.topAnchor, constant: -10),
+            
+            dbVersionLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            dbVersionLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 20),
+            dbVersionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            dbVersionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            
+            totalLabel.topAnchor.constraint(greaterThanOrEqualTo: dbVersionLabel.bottomAnchor, constant: 10),
+            totalLabel.topAnchor.constraint(lessThanOrEqualTo: dbVersionLabel.bottomAnchor, constant: 25),
+            totalLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            totalLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            totalLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            
+            checkLabel.topAnchor.constraint(greaterThanOrEqualTo: totalLabel.bottomAnchor, constant: 20),
+            checkLabel.topAnchor.constraint(lessThanOrEqualTo: totalLabel.bottomAnchor, constant: 60),
+            checkLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            checkLabel.bottomAnchor.constraint(equalTo: bottomAnchor,  constant: -22),
+            checkLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            checkLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+        ])
     }
     
     override func layoutSubviews() {

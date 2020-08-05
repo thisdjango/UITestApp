@@ -91,24 +91,29 @@ class ViewController: UIViewController {
         
         logoImageView.topAnchor.constraint(equalTo: top, constant: 40).isActive = true
         logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        logoImageView.heightAnchor.constraint(greaterThanOrEqualToConstant: 60).isActive = true
+        logoImageView.heightAnchor.constraint(lessThanOrEqualToConstant: 120).isActive = true
         
         buttonsStack.topAnchor.constraint(greaterThanOrEqualTo: logoImageView.bottomAnchor, constant: 15).isActive = true
-        buttonsStack.topAnchor.constraint(lessThanOrEqualTo: logoImageView.bottomAnchor, constant: 60).isActive = true
+        buttonsStack.topAnchor.constraint(lessThanOrEqualTo: logoImageView.bottomAnchor, constant: 40).isActive = true
         buttonsStack.heightAnchor.constraint(equalToConstant: 43).isActive = true
         buttonsStack.leadingAnchor.constraint(equalTo: lead, constant: 24).isActive = true
         buttonsStack.trailingAnchor.constraint(equalTo: trail, constant: -24).isActive = true
 
         backView.pin(to: buttonsStack)
         
-        infoCardView.topAnchor.constraint(equalTo: buttonsStack.bottomAnchor, constant: 35).isActive = true
+        infoCardView.topAnchor.constraint(greaterThanOrEqualTo: buttonsStack.bottomAnchor, constant: 10).isActive = true
+        infoCardView.topAnchor.constraint(lessThanOrEqualTo: buttonsStack.bottomAnchor, constant: 35).isActive = true
         infoCardView.leadingAnchor.constraint(equalTo: lead, constant: 24).isActive = true
         infoCardView.trailingAnchor.constraint(equalTo: trail, constant: -24).isActive = true
         
-        button.topAnchor.constraint(equalTo: infoCardView.bottomAnchor, constant: 45).isActive = true
+        button.topAnchor.constraint(greaterThanOrEqualTo: infoCardView.bottomAnchor, constant: 10).isActive = true
+        button.topAnchor.constraint(lessThanOrEqualTo: infoCardView.bottomAnchor, constant: 65).isActive = true
         button.leadingAnchor.constraint(equalTo: lead, constant: 24).isActive = true
         button.trailingAnchor.constraint(equalTo: trail, constant: -24).isActive = true
         button.heightAnchor.constraint(equalToConstant: 60).isActive = true
-        button.bottomAnchor.constraint(equalTo: bottom, constant: -35).isActive = true
+        button.bottomAnchor.constraint(greaterThanOrEqualTo: bottom, constant: -35).isActive = true
+        button.bottomAnchor.constraint(lessThanOrEqualTo: bottom, constant: -15).isActive = true
     }
     
     private func prepareButton(name image: String, to selector: Selector) -> UIButton {

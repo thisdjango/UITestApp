@@ -8,11 +8,14 @@
 
 import UIKit
 
-class CustomLabel: UILabel {
+class CustomLabel: UIView {
+    private var leftLabel = UILabel()
+    private var rightLabel = UILabel()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
+        layoutConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -25,7 +28,7 @@ class CustomLabel: UILabel {
         paragraph.alignment = .left
         
         var attr = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15, weight: .light), NSAttributedString.Key.paragraphStyle: paragraph]
-        let attrStr = NSMutableAttributedString(string: left, attributes: attr)
+        leftLabel.attributedText = NSMutableAttributedString(string: left, attributes: attr)
         
         paragraph = NSMutableParagraphStyle()
         paragraph.alignment = .right
@@ -33,11 +36,23 @@ class CustomLabel: UILabel {
         attr = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15, weight: .light),
                 NSAttributedString.Key.paragraphStyle: paragraph,
                 NSAttributedString.Key.foregroundColor: AppColor.green]
-        let attrStr2: NSAttributedString = NSAttributedString(string: right, attributes: attr)
+        rightLabel.attributedText = NSAttributedString(string: right, attributes: attr)
         
-        attrStr.append(attrStr2)
-        
-        attributedText = attrStr
     }
-
+    private func layoutConstraints() {
+        addSubview(leftLabel.prepare())
+        addSubview(rightLabel.prepare())
+        NSLayoutConstraint.activate([
+        
+            leftLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            leftLabel.topAnchor.constraint(equalTo: topAnchor),
+            leftLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
+            rightLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+            rightLabel.topAnchor.constraint(equalTo: topAnchor),
+            rightLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
+            leftLabel.trailingAnchor.constraint(greaterThanOrEqualTo: rightLabel.leadingAnchor, constant: 15)
+        ])
+    }
 }
