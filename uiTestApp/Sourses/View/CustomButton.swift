@@ -43,7 +43,7 @@ class CustomButton: UIButton {
         gradLayer.cornerRadius = frame.height / 2 + 0.1
         layer.insertSublayer(gradLayer, at: 0)
         layer.cornerRadius = frame.height / 2
-        layer.borderWidth = 7
+        layer.borderWidth = 8
         layer.borderColor = AppColor.liteGray.cgColor
         translatesAutoresizingMaskIntoConstraints = false
         heightAnchor.constraint(equalToConstant: 53).isActive = true
