@@ -31,7 +31,7 @@ class CardView: UIView {
         addSubview(totalLabel.prepare())
         addSubview(checkLabel.prepare())
 
-        titleLabel.text = "Web Surfing is protected well"
+        titleLabel.text = "Web Surfing is protected good"
         titleLabel.textColor = AppColor.green
         titleLabel.font = UIFont.systemFont(ofSize: 20)
         
